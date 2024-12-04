@@ -1,0 +1,181 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Navbar Style */
+nav {
+    background-color: rgb(255, 80, 80);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 20px 20px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    color: white;
+    background-color: red;
+    padding: 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.navbar-right a:hover {
+    background-color: orangered;
+}
+
+.navbar-links {
+    display: flex;
+    margin-left: 40px;
+    gap: 20px;
+    list-style: none;
+}
+
+.navbar-links .active-link {
+    font-weight: bolder;
+    color: white;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+nav img {
+    width: 50px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    width: 70%;
+}
+
+.pages {
+    padding-right: 25px;
+}
+
+.pages .paragraph {
+    margin-top: 10px;
+}
+
+.pages p {
+    text-align: justify;
+}
+
+.photoCard h3 {
+    text-align: center;
+}
+
+.photoCard p {
+    text-align: center;
+}
+
+.photoCard img {
+    margin-top: 15px;
+    border-radius: 10px 10px 10px 10px;
+    width: 200px;
+}
+
+.contact-cv {
+    display: flex;
+    justify-content: start;
+    margin-top: 10px;
+}
+
+.contact-cv p {
+    margin-right: 30px;
+}
+
+.contact-cv img {
+    margin-top: 7px;
+    margin-left: -22px;
+    width: 20px;
+}
+
+.getContact {
+    border-radius: 5px 5px 5px 5px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+.cv {
+    margin-top: 5px;
+}
+
+.media {
+    display: flex;
+    justify-content: start;
+}
+
+.media img {
+    width: 35px;
+    margin-top: 25px;
+    margin-right: 30px;
+}
+
+
+/* Contact Me Section Styles */
+.contact-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form {
+    width: 400px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form-input {
+    border-radius: 5px;
+    border: 1px solid #cacaca;
+    padding: 7px;
+}
+
+.form-submit-button {
+    color: white;
+    background-color: orangered;
+    border: 1px solid orangered;
+    border-radius: 5px;
+    padding: 5px 20px;
+}
+
+.contact-section {
+    margin-top: 80px;
+}
