@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="pinterest-brands-solid.svg">
+</head>
+<body class="poppins-regular">
+    <!-- Navbar Section -->
+    <nav>
+        <div class="navbar-left">
+            <a href="">
+                <img src="pinterest-brands-solid.svg" alt="personal-web">
+            </a>
+            <ul class="navbar-links">
+                <li><a href="../Project/Profile/index.html">Home</a></li>
+                <li><a href="../../Exercise/blog.html" class="active-link">My Project</a></li>
+            </ul>
+        </div>
+        
+        <div class="navbar-right">
+            <a href="#contactForm">Contact Me</a>
+        </div>
+    </nav>
+
+    <!-- Main Section -->
+     <main>
+        <section class="blog-form">
+            <form onsubmit="addBlog(event)" action="" class="form-container">
+                <h1>Tambahkan Projek</h1>
+
+                <div class="form-field">
+                    <label for="input-blog-title">Nama Projek</label>
+                    <input 
+                    type="text" 
+                    id="input-blog-title"  
+                    required>
+                </div>
+
+                <div class="form-field">
+                    <label for="input-blog-content">Deskripsi</label>
+                    <textarea 
+                    name="input-blog-content" 
+                    id="input-blog-content" 
+                    rows="10"></textarea>
+                </div>
+                
+                <div class="form-field">
+                    <label for="input-blog-image">Unggah File</label>
+                    <div class="input-blog-image-group">
+                        <label for="input-blog-image">
+                            <p class="attach-file">Ambil File</p>
+                            <img src="file.png" alt="attach">
+                        </label>
+
+                        <input 
+                        type="file" 
+                        id="input-blog-image"
+                        hidden>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button type="submit">Unggah Project</button>
+                </div>
+            </form>
+        </section>
+
+        <hr>
+
+        <section class="blog-container">
+            <div class="blog-list" id="blogList">
+                <div class="blog-list-item">
+                    <div class="blog-image">
+                        <img src="blog-img-detail.png" alt="img-content">
+                    </div>
+
+                    <div class="blog-content">
+                        <div class="btn-group">
+                            <button class="edit-post">Edit Post</button>
+                            <button class="post-blog">Post Blog</button>
+                        </div>
+                        <h1>
+                            <a href="../Exercise/blog-detail.html">Pasar Coding di Indonesia Masih Menjanjikan</a>
+                        </h1>
+                        <div class="detail-blog-content">
+                            12 Juli 2024 22:30 WIB | Rendy Zulfan
+                        </div>
+                        <p class="blog-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laudantium hic expedita dolorem id quaerat reprehenderit assumenda ut laborum, delectus ad eius distinctio quidem perspiciatis repellat facilis amet veritatis at mollitia officiis tenetur esse dolore illo velit? Laborum odit rem nihil harum blanditiis quidem, officia, alias aut aliquam ipsum ducimus?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+     </main>
+    
+    <script src="app.js"></script>
+</body>
+</html>
