@@ -1,0 +1,33 @@
+{
+  "name": "b59-personal-web",
+  "version": "1.0.0",
+  "description": "Website Personal Web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rendyzulfan/b59-personal-web.git"
+  },
+  "author": "Rendy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rendyzulfan/b59-personal-web/issues"
+  },
+  "homepage": "https://github.com/rendyzulfan/b59-personal-web#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "hbs": "^4.2.0",
+    "method-override": "^3.0.0",
+    "pg": "^8.13.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.5",
+    "sweetalert2": "^11.15.3"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.2"
+  }
+}

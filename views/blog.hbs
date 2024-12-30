@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/project.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/blog.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+</head>
+<body>
+    {{> navbarBlog}}
+
+<main>
+      <section class="blog-container">
+        <a href="add-blog">
+          <button style="margin-bottom: 10px;">
+              Tambahkan Blog
+          </button>
+        </a>
+        <div class="blog-list" id="blogList">
+          {{#each data }}
+           <div class="blog-list-item">
+            <div class="blog-image">
+              <img src="../assets/images/{{this.image}}" alt="{{this.image}}" />
+            </div>
+            <div class="blog-content">
+              <div class="btn-group">
+                <a href="/edit-blog/{{this.id}}?image={{this.image}}" >
+                  <button class="btn-edit">Edit</button>
+                </a>
+                <form action="/blog-delete/{{this.id}}?_method=DELETE" method="post" style="display: inline;">
+                  <button onclick="return confirm('Delete Title: {{this.title}}')" class="btn-post">Delete</button>
+                </form>
+              </div>
+              <a href="/detail-blog/{{this.id}}" style="text-decoration: none; color:black">
+                <h1>{{this.title}}</h1>
+              </a>
+              <div class="detail-blog-content">
+                {{formatDate createdAt}}
+                 | {{this.author}}
+              </div>
+              <div class="blog-text text-lines">
+                {{this.content}}
+              </div>
+              <p style="text-align: right">
+                <span id="realTime-0">{{times createdAt}}</span>
+              </p>
+            </div>
+          </div>
+          {{else}}
+            <p class="empty">No content</p>
+          {{/each}}
+        </div>
+      </section>
+    </main>
+
+</body>
+</html>

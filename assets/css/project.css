@@ -1,0 +1,442 @@
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0px;
+}
+
+.navbar {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 90px;
+  background: rgb(255, 80, 80);
+  align-items: center;
+  top: 0px;
+}
+
+.navbar img {
+  width: 3.2rem;
+  margin-left: 22px;
+}
+
+.navbar .link ul {
+  display: flex;
+  gap: 20px;
+  font-weight: bolder;
+  list-style: none;
+}
+
+.link .active-link {
+  color: white;
+  font-weight: bolder;
+}
+
+.navbar .link {
+  width: 100%;
+}
+
+.navbar button {
+  border-radius: 8px;
+  height: 30px;
+  padding: 5px;
+  font-size: 16px;
+  width: 120px;
+  margin-right: 2rem;
+  font-weight: bolder;
+  background-color: rgb(255, 124, 76);
+}
+
+.flex-body {
+  display: flex;
+  flex-direction: row;
+  padding-left: 5rem;
+  margin: 8rem;
+  padding-bottom: 4rem;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  border-radius: 1rem;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8rem;
+  padding-bottom: 4rem;
+}
+.form-content form h1 {
+  text-align: center;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+select {
+  background: url("data:image/svg+xml,<svg height='40px' width='30px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>")
+    no-repeat;
+  background-position: calc(100% - 0.75rem) center !important;
+  appearance: none !important;
+  padding-right: 2rem !important;
+  padding-left: 1rem !important;
+  background-color: white;
+}
+
+.form-control input,
+.form-control select {
+  height: 40px;
+}
+.form-control input,
+.form-control textarea,
+.form-control select {
+  border-radius: 0.3rem;
+  background-color: #c4c4c4;
+  border-style: none;
+  box-shadow: 0 8px 10px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+.file-upload label {
+  background: #c4c4c4;
+}
+
+.content {
+  width: 100%;
+  height: 120vh;
+  background-color: #ff9696;
+  padding-top: 0.001rem;
+}
+
+.description {
+  text-align: justify;
+  width: 50vw;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.btn-primary {
+  border-radius: 25px;
+  background-color: #111727;
+  width: 150px;
+  height: 40px;
+  border-width: 0px;
+  color: #f4f4f5;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.download-cv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: -10px;
+  margin-left: 2rem;
+}
+
+.contact-control {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.download-cv span {
+  margin-left: 10px;
+  font-size: 30px;
+}
+
+.btn-right {
+  text-align: end;
+}
+
+.socmed-icons {
+  margin-top: 2.5rem;
+  font-size: 23px;
+  word-spacing: 20px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: orangered;
+  font-weight: bolder;
+}
+
+.socmed-icons a .fa-stack.fa-md .fa-brands.fa-instagram {
+  font-size: 35px;
+}
+
+.profile-pic {
+  margin: auto;
+  background-color: rgb(255 255 255);
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  width: 20vw;
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 500px;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.profile-pic div p {
+  margin-top: -20px;
+  padding-bottom: 10px;
+}
+
+.test {
+  background-color: rgb(254 202 202);
+}
+
+/* my project */
+
+.form-project {
+  margin-bottom: 1rem;
+}
+
+.form-project .label-project {
+  font-weight: bold;
+}
+
+.form-project .checkbox {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 3rem;
+  row-gap: 12px;
+}
+
+.checkbox div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.checkbox div input {
+  appearance: none;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 7px;
+  border: 2px solid #c4c4c4;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  background-color: #fff;
+  margin: 0;
+  cursor: pointer;
+}
+
+.form-date input{
+  background-color: #c4c4c4;
+}
+
+.checkbox div input:checked {
+  background-color: #005cc8;
+  border-color: #005cc8;
+}
+
+.checkbox div input:checked::after {
+  content: "✓";
+  font-size: 18px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.file-upload {
+  width: 100%;
+  height: 40px;
+  border-radius: 0.3rem;
+  background-color: rgb(255 255 255);
+  cursor: pointer;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+.file-upload label {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.file-upload label p {
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  font-size: 22px;
+  border-radius: 0.25rem;
+  background-color: #e4e4e4;
+  border: 1px solid #c4c4c4;
+  color: #9e9a9a;
+}
+.file-upload label i {
+  width: 100%;
+  text-align: end;
+  padding-right: 1rem;
+}
+
+.date {
+  display: flex;
+  gap: 20px;
+}
+
+.form-date {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.form-date input {
+  border-radius: 0.3rem;
+  border-style: none;
+  height: 40px;
+  box-shadow: 0 8px 10px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+/* MY Project */
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  padding-bottom: 4rem;
+}
+
+.project-list {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.project-card {
+  width: 300px;
+  height: 450px;
+  border-radius: 10px;
+  border: 1px solid #c4c4c4;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.project-card img {
+  width: 100%;
+  height: 45%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.project-card .title {
+  margin: 0;
+  font-size: 14px;
+}
+.project-card .duration {
+  margin: 0;
+  font-size: 12px;
+  color: gray;
+}
+.project-card .content-card {
+  margin: 10px 0;
+  text-align: justify;
+  font-size: 13px;
+}
+
+.project-card .icon-card img {
+  width: 35px;
+  margin-right: 1rem;
+}
+.project-card .icon-card {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.project-card .btn-card {
+  display: flex;
+  gap: 10px;
+}
+.project-card .btn-card .btn-primary {
+  border-radius: 10px;
+  height: 30px;
+}
+
+/* detail */
+
+.detail-content {
+  width: 100%;
+  height: 100vh;
+  padding-top: 1rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.detail-figure {
+  padding-left: 30%;
+  padding-right: 30%;
+  margin: 0;
+  display: flex;
+}
+.detail-figure img {
+  max-width: 400px;
+  max-height: 400px;
+  object-fit: fill;
+}
+.detail-project-layout {
+  padding-left: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.detail-project-layout p {
+  text-align: left;
+  margin: 0 0 10px;
+}
+
+.detail-project {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.detail-project img {
+  width: 30px;
+  height: 30px;
+}
+
+.details-technologies {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.details-technologies div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 200px;
+}
+.details-technologies div p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.details-technologies div img {
+  width: 30px;
+  height: 30px;
+}
+
+.detail-article {
+  padding-left: 30%;
+  padding-right: 30%;
+  text-align: justify;
+}

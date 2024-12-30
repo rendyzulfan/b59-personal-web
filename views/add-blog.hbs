@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Blog</title>
+    <link rel="stylesheet" href="../assets/css/blog.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+</head>
+<body>
+{{> navbarBlog}}
+    <main>
+     <a href="blog">
+        <button>Back</button>
+      </a>
+      <section class="section-form">
+        <form action="/blog" method="post" id="form-input">
+          <h1 class="section-title">Create a blog</h1>
+          <div class="form-fields">
+            <label for="input-blog-title">Title</label>
+            <input
+              type="text"
+              id="input-blog-title"
+              name="title"
+              class="form-input"
+              placeholder="title" />
+              <span style="color: red;">{{message}}</span>
+          </div>
+
+          <div class="form-fields">
+            <label for="input-blog-content">Content</label>
+            <textarea
+              id="input-blog-content"
+              name="content"
+              rows="8"
+              class="form-input"
+              placeholder="content"></textarea>
+          </div>
+
+          <div class="form-fields">
+            <label for="input-images">Upload Images</label>
+            <div class="input-image-group">
+              <label for="input-blog-images" class="input-label">
+                <p>Attach File</p>
+                <img src="../assets/images/attach.png" alt="" />
+              </label>
+              <input
+                type="file"
+                id="input-blog-images"
+                name="images"
+                class="form-input"
+                placeholder="images"
+                hidden />
+            </div>
+          </div>
+          <div class="button-group">
+            <button type="submit" class="button-blog">Post Blog</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    
+    <script src="../assets/js/blog.js"></script>
+</body>
+</html>

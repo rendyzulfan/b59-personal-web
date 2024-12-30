@@ -4,10 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile</title>
     <!-- Link to CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../assets/css/project.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 
     <!-- Logo -->
-     <link rel="icon" href="pinterest-brands-solid.svg">
+     <link rel="icon" href="../assets/img/pinterest-brands-solid.svg">
 
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,21 +17,7 @@
 </head>
 <body class="poppins-regular">
 <!-- Navbar Section -->
-    <nav>
-        <div class="navbar-left">
-            <a href="">
-                <img src="pinterest-brands-solid.svg" alt="personal-web">
-            </a>
-            <ul class="navbar-links">
-                <li><a href="" class="active-link">Home</a></li>
-                <li><a href="../../Exercise/blog.html">My Project</a></li>
-            </ul>
-        </div>
-        
-        <div class="navbar-right">
-            <a href="#contactForm">Contact Me</a>
-        </div>
-    </nav>
+{{> navbar}}
 
 <!-- Main Section -->
     <div class="main">
@@ -46,17 +33,17 @@
                 <div class="contact-cv">
                     <p class="getContact">Contact</p>
                     <p class="cv">download CV</p>
-                    <a href=""><img src="download-solid.svg" alt=""></a>
+                    <a href=""><img src="../assets/img/download-solid.svg" alt=""></a>
                 </div>
                 <div class="media">
-                    <img src="square-instagram-brands-solid.svg" alt="">
-                    <img src="linkedin-brands-solid.svg" alt="">
-                    <img src="square-twitter-brands-solid.svg" alt="">
-                    <img src="square-facebook-brands-solid.svg" alt="">
+                    <img src="../assets/img/square-instagram-brands-solid.svg" alt="">
+                    <img src="../assets/img/linkedin-brands-solid.svg" alt="">
+                    <img src="../assets/img/square-twitter-brands-solid.svg" alt="">
+                    <img src="../assets/img/square-facebook-brands-solid.svg" alt="">
                 </div>
             </div>
             <div class="photoCard">
-                <img src="Arzi.jpg" alt="">
+                <img src="../assets/img/Arzi.jpg" alt="">
                 <h3>Rendy Zulfan</h3>
                 <p><em>Fullstack Developer</em></p>
             </div>
@@ -105,6 +92,14 @@
     </main>
 
     <script src="submitForm.js"></script>
-    <script src="belajar-js.js"></script>
+    <!-- <script src="belajar-js.js"></script> -->
+    <!-- Include Handlebars from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script>
+    // compile the template
+    var template = Handlebars.compile("Handlebars <b>{{doesWhat}}</b>");
+    // execute the compiled template and print the output to the console
+    console.log(template({ doesWhat: "Good Morning!" }));
+    </script>
 </body>
 </html>

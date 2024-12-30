@@ -91,7 +91,7 @@ nav img {
 
 .skill-set {
     display: flex;
-    background-image: url(background_2.jpg);
+    background-image: url(../img/background_2.jpg);
     background-size: cover;
     opacity: 80%;
     padding: 15px;
