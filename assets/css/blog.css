@@ -1,13 +1,18 @@
 body {
     margin: 0;
   }
-  .section-title {
+.section-title {
     color: black;
     text-align: center;
-  }
-  label {
+}
+label {
     color: #000;
-  }
+}
+
+main {
+  margin-top: 50px;
+  margin-left: 40%;
+}
 
   .form-fields {
     margin: 10px auto;
@@ -15,8 +20,11 @@ body {
     text-transform: capitalize;
     display: flex;
     flex-direction: column;
+    justify-content: center;
   }
   .form-input {
+    width: 300px;
+    border-radius: 10px;
     background: rgb(255, 255, 255);
     border: 1px solid gray;
     border-radius: 5px;

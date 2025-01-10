@@ -12,6 +12,11 @@
     </div>
     
     <div class="navbar-right">
+        {{#if user }}
+        Hello, {{user.username}}
+        {{/if}}
+        <a href="/login" style="margin-right: 5px;">Login</a>
+        <a href="/register" style="margin-right: 20px;">Register</a>
         <a href="#contactForm">Contact Me</a>
     </div>
 </nav>

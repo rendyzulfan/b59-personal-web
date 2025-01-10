@@ -4,9 +4,9 @@
 }
 
 .poppins-regular {
+    font-size: 15px;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
-    font-style: normal;
 }
 
 /* Navbar Style */
@@ -42,6 +42,52 @@ nav {
     color: black;
 }
 
+.cv-download {
+    background-color: rgb(62, 58, 58);
+}
+
+.nav-item .login {
+    color: white;
+    background-color: rgb(133, 133, 255);
+}
+
+.nav-item .register {
+    color: white;
+    background-color: rgb(133, 133, 255);
+}
+
+.nav-item .login:hover {
+    color: white;
+    background-color: rgb(68, 68, 255);
+}
+
+.nav-item .register:hover {
+    color: white;
+    background-color: rgb(68, 68, 255);
+}
+
+.nav-item .contact-me {
+    background-color: rgb(156, 213, 156);
+    color: black;
+}
+
+.nav-item .contact-me:hover {
+    background-color: rgb(90, 195, 90);
+}
+
+.cv-download:hover {
+    cursor: pointer;
+    background-color: black;
+}
+
+.nav-item .nav-links{
+    color: white;
+}
+
+.nav-item .nav-links:hover{
+    color: rgb(223, 204, 204);
+}
+
 .navbar-links {
     display: flex;
     margin-left: 40px;
@@ -49,9 +95,19 @@ nav {
     list-style: none;
 }
 
-.navbar-links .active-link {
+.logout-item {
+    background-color: yellow;
+    color: rgb(100, 100, 255);
+    text-decoration: none;
+}
+
+.logout-item:hover {
+   background-color: rgb(238, 246, 83);
+}
+
+.navbar-item .active-link {
     font-weight: bolder;
-    color: white;
+    color: rgb(132, 109, 109);
 }
 
 .navbar-links a {
@@ -119,6 +175,7 @@ nav img {
 }
 
 .photoCard p {
+    margin-top: -10px;
     text-align: center;
 }
 

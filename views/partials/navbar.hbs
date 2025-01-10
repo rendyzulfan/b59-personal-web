@@ -4,14 +4,19 @@
             <img src="../assets/img/pinterest-brands-solid.svg" alt="personal-web">
         </a>
         <ul class="navbar-links">
-            <li><a href="/" class="active-link">Home</a></li>
-            <li><a href="blog">Blog</a></li>
-            <li><a href="project">My Project</a></li>
-            <li><a href="testimonial">Testimonials</a></li>
+            <li><a href="/" class="{{#if (equal currenPage 'index')}} active active-link {{/if}}">Home</a></li>
+            <li><a href="blog" class="{{#if (equal currenPage 'blog')}} active active-link{{/if}}">Blog</a></li>
+            <li><a href="project" class="{{#if (equal currenPage 'project')}} active active-link{{/if}}">My Project</a></li>
+            <li><a href="testimonial" class="{{#if (equal currenPage 'testimonial')}} active active-link{{/if}}">Testimonials</a></li>
         </ul>
     </div>
-    
+
     <div class="navbar-right">
-        <a href="#contactForm">Contact Me</a>
+        {{#if user }}
+        <p style="margin-right: 20px;">Hello, {{user.username}}</p>
+        {{/if}}
+        <a href="/login" style="margin-right: 5px;">Login</a>
+        <a href="/register" style="margin-right: 20px;">Register</a>
+        <a href="/contactForm">Contact Me</a>
     </div>
 </nav>

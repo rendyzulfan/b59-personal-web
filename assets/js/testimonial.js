@@ -40,14 +40,14 @@ let testimonials = [
       .map(
         (testimonial) => `
       <div class="d-flex justify-content-center my-3">
-          <div class="card p-3 col mx-0">
+          <div class="card p-2 shadow rounded-4 col mx-0">
               <img src="${testimonial.image}" class="card-img-top" alt="..." />
               <div class="card-body px-0">
                 <div class="overflow-scroll" style="height: 50px">
-                  <p class="card-text">${testimonial.content}</p>
+                  <p class="card-text fw-bolder">${testimonial.content}</p>
                 </div>
                 <div class="text-end fw-bold mt-3">
-                  <p>- ${testimonial.author}</p>
+                  <p class="bg-dark p-2 rounded-4 text-light">- ${testimonial.author}</p>
                   <p>${testimonial.rating}✯</p>
                 </div>
               </div>

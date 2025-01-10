@@ -1,1 +1,4 @@
 /* Testimonial Page */
+.container {
+    display: flex;
+}

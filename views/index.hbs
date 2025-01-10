@@ -14,16 +14,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body class="poppins-regular">
 <!-- Navbar Section -->
-{{> navbar}}
-
+{{> navbarNew currenPage = 'index' user = user}}
 <!-- Main Section -->
+
+    {{#if messages.success}}
+    <div class="d-flex justify-content-center alert alert-warning alert-dismissible fade show" role="alert" style="height: 50px;">
+        <p>Hai! <strong>{{user.username}},</strong> {{messages.success}}</p>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {{/if}}
     <div class="main">
         <div class="main-content">
             <div class="pages">
-                <h2>Hi! Welcome to My Page</h2>
+                <h2 class="fw-bolder">Hi! Welcome to My Page</h2>
                 <p class="paragraph">My name is Rendy Zulfan Maulana Rasyid, a fresh graduate Management from Brawijaya University with specialization in Human Resource Management. Have the initiative to change my career orientation from HR to Programming. It's so challenging but i will enjoy the journey before become a fulltack developer, who can build any website with such a variative demand. Programming, for me is not just writing down the code on your Visual Studio Code. It's about solve a problem.</p>
                 <div class="skill-set">
                     <h3>Steve Jobs</h3>
@@ -31,15 +38,16 @@
                         (Semua orang harus belajar pemrograman, karena itu mengajarkan cara berpikir.)</p>
                 </div>
                 <div class="contact-cv">
-                    <p class="getContact">Contact</p>
-                    <p class="cv">download CV</p>
-                    <a href=""><img src="../assets/img/download-solid.svg" alt=""></a>
+                    <label class="cv-download fw-bolder text-light p-2 rounded" for="downloadCV">Download CV</label>
+                    <input name="downloadCV" id="downloadCV" class="mt-1 me-1" type="file" hidden> 
+                    {{!-- <p class="cv">download CV</p>
+                    <a href=""><img src="../assets/img/download-solid.svg" alt=""></a> --}}
                 </div>
                 <div class="media">
-                    <img src="../assets/img/square-instagram-brands-solid.svg" alt="">
-                    <img src="../assets/img/linkedin-brands-solid.svg" alt="">
-                    <img src="../assets/img/square-twitter-brands-solid.svg" alt="">
-                    <img src="../assets/img/square-facebook-brands-solid.svg" alt="">
+                    <a href="/instagram"><img src="../assets/img/square-instagram-brands-solid.svg" alt=""></a>
+                    <a href="/linkedIn"><img src="../assets/img/linkedin-brands-solid.svg" alt=""></a>
+                    <a href="/twitter"><img src="../assets/img/square-twitter-brands-solid.svg" alt=""></a>
+                    <a href="/facebook"><img src="../assets/img/square-facebook-brands-solid.svg" alt=""></a>
                 </div>
             </div>
             <div class="photoCard">
@@ -49,47 +57,6 @@
             </div>
         </div>
     </div>
-
-<!-- Form Section -->
-    <main class="contact-section">
-        <form id="contactForm" class="contact-form">
-            <h1>Contact Me</h1>
-            <div class="form-field">
-                <label for="name">Name</label>
-                <input id="name" name="name" class="form-input" type="text" placeholder="name" required />
-            </div>
-
-            <div class="form-field">
-                <label for="email">Email</label>
-                <input id="email" name="email" class="form-input" type="email" placeholder="email" required />
-            </div>
-
-            <div class="form-field">
-                <label for="phoneNumber">Phone Number</label>
-                <input id="phoneNumber" name="phoneNumber" class="form-input" type="number" placeholder="phone number" required/>
-            </div>
-            
-            <div class="form-field">
-                <label for="subject">Subject</label>
-                <input id="subject" name="subject" class="form-input" placeholder="subject" required></input>
-            </div>
-
-            <div class="form-field">
-                <label for="skill">Skill</label>
-                <select id="skill" name="skill" class="form-input" required>
-                    <option value="Frontend">Frontend</option>
-                    <option value="Backend">Backend</option>
-                </select>
-            </div>
-
-            <div class="form-field">
-                <label class="message-contact" for="message">Your Message</label>
-                <textarea id="message" name="message" class="form-input" required></textarea>
-            </div>
-
-            <button type="submit" class="form-submit-button">Submit</button>
-        </form>
-    </main>
 
     <script src="submitForm.js"></script>
     <!-- <script src="belajar-js.js"></script> -->
@@ -101,5 +68,8 @@
     // execute the compiled template and print the output to the console
     console.log(template({ doesWhat: "Good Morning!" }));
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
 </html>

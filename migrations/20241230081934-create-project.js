@@ -19,18 +19,28 @@ module.exports = {
         type: Sequelize.STRING,
       },
       startDate: {
-        allowNull: false,
-        type: Sequelize.DATE,
-        defaultValue: Sequelize.NOW,
+        // allowNull: false,
+        type: Sequelize.STRING,
+        // defaultValue: Sequelize.NOW,
       },
       endDate: {
-        allowNull: false,
-        type: Sequelize.DATE,
-        defaultValue: Sequelize.NOW,
+        // allowNull: false,
+        type: Sequelize.STRING,
+        // defaultValue: Sequelize.NOW,
       },
       technologies: {
         type: Sequelize.STRING,
-      }
+      },
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.NOW,
+      },
+      updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.NOW,
+      },
     });
   },
   async down(queryInterface, Sequelize) {

@@ -1,0 +1,12 @@
+#auth-login {
+    text-decoration: none;
+}
+
+#auth-register {
+    color: black;
+    text-decoration: none;
+}
+
+#auth-register:hover {
+    color: rgb(76, 76, 255);
+}
