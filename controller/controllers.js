@@ -202,7 +202,7 @@ async function authRegister(req, res) {
 
   const hashedPassword = await bcrypt.hash(password, saltrounds)
 
-  const user = await User.create({
+  await User.create({
     username, 
     email, 
     password: hashedPassword,
