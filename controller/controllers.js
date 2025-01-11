@@ -1,12 +1,12 @@
 const {Sequelize, QueryTypes, where} = require("sequelize");
 const bcrypt = require('bcrypt');
-const config = require("../config/config.json");
+const config = require("../config/config");
 const { types } = require("pg");
 const {Project, User} = require("../models")
-
+const env = process.env.NODE_ENV || "production";
 const saltrounds = 10; 
 
-const sequelize = new Sequelize(config.development);
+const sequelize = new Sequelize(config[env]);
 // HOME
 function renderHome(req, res) {
   const user = req.session.user
